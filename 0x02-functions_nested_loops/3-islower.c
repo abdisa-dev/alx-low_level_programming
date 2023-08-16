@@ -3,6 +3,7 @@
 /**
  * _islower - return if c is lower or not 1 or 0 relatively
  * Return: 1 or 0 depend on c value
+ * @c: recives charachters
  */
 
 int _islower(int c)
