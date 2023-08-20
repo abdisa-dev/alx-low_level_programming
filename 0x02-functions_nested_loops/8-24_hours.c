@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * jack_bauer -
- *
+ * jack_bauer - print every hour and min in 24 hrs
  */
 
 void jack_bauer(void)
