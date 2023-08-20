@@ -15,7 +15,11 @@ void print_times_table(int n)
 		{
 			c = a * b;
 
-			if (c > 9 && c <= 15)
+			if (b == 0)
+			{
+				_putchar(c + '0');
+			}
+			else if (n >= 9 && n <= 15)
 			{
 				_putchar(c / 10 + '0');
 				_putchar(c % 10 + '0');
