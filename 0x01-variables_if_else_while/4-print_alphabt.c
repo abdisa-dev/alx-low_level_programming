@@ -7,14 +7,14 @@
 
 int main(void)
 {
-    int a;
+	int a;
 
-    for (a = 'a'; a <= 'z'; a++)
-    {
-        if (a != 'e' && a != 'q')
-            putchar(a);
-    }
-    putchar('\n');
+	for (a = 'a'; a <= 'z'; a++)
+	{
+		if (a != 'e' && a != 'q')
+			putchar(a);
+	}
+	putchar('\n');
 
-    return (0);
+	return (0);
 }
