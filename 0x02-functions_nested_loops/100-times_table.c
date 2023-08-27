@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * print_times_table - prints input number times table
  * @n: input number from the user
@@ -17,28 +17,28 @@ void print_times_table(int n)
 
 			if (b == 0)
 			{
-				_putchar(c + '0');
+				putchar(c + '0');
 			}
-			else if (n >= 9 && n <= 15)
+			else if (c <= n)
 			{
-				_putchar(c / 10 + '0');
-				_putchar(c % 10 + '0');
-				if (b != n)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
+				putchar(c + '0');
 			}
-			else if (n != 0)
+			else if (c >= n)
 			{
-				_putchar(c + '0');
-				if (b != n)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
+				putchar(c / 10 + '0');
+				putchar(c % 10 + '0');
 			}
 		}
-		_putchar('\n');
+		putchar('\n');
 	}
+}
+
+int main(void)
+{
+	print_times_table(3);
+	return (0);
 }
