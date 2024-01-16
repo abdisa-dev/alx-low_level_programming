@@ -13,10 +13,10 @@ int main(int __attribute__((unused))argc, char __attribute__((unused))*argv[])
 {
 	if (argc == 3)
 	{
-		printf("%d", (atoi(argv[1]) * atoi(argv[2])));
+		printf("%d\n", (atoi(argv[1]) * atoi(argv[2])));
 	} else
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 	return (0);
