@@ -1,9 +1,8 @@
 #include "main.h"
-#include "main.h"
 #include <stdio.h>
 
 /**
- * main - print the length of passed arguments
+ * main - print the all passed arguments
  * @argc: argument counter
  * @argv: argument vector
  * Return: always 0
@@ -11,7 +10,12 @@
 
 int main(int __attribute__((unused))argc, char __attribute__((unused))*argv[])
 {
-	printf("%d\n", argc - 1);
+    int i;
 
-	return (0);
+    for(i = 0; i < argc; i++)
+    {
+        printf("%s\n", argv[i]);
+    }
+
+    return (0);
 }
