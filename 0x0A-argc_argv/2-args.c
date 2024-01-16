@@ -10,12 +10,12 @@
 
 int main(int __attribute__((unused))argc, char __attribute__((unused))*argv[])
 {
-    int i;
+	int i;
 
-    for(i = 0; i < argc; i++)
-    {
-        printf("%s\n", argv[i]);
-    }
+	for (i = 0; i < argc; i++)
+	{
+		printf("%s\n", argv[i]);
+	}
 
-    return (0);
+	return (0);
 }
