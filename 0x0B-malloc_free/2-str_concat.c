@@ -13,10 +13,15 @@ char *str_concat(char *s1, char *s2)
 	unsigned int counter, len;
 	char *concatinator;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 	{
-		return ("");
+		s1 = ("");
 	}
+	if (s2 == NULL)
+	{
+		s2 = ("");
+	}
+
 	len = ((strlen(s1) + strlen(s2)) + 1);
 	concatinator = malloc(sizeof(*concatinator) * len);
 	counter = 0;
