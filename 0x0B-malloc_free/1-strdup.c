@@ -8,12 +8,17 @@
 
 char *_strdup(char *str)
 {
-	unsigned int counter = 0;
-	unsigned int str_len = strlen(str) + 1;
-	char *dup_str = malloc(sizeof(*str) * str_len);
+	unsigned int str_len, counter = 0;
+	char *dup_str;
 
-	if (str == NULL || dup_str == NULL)
+	if (str == NULL)
 		return (NULL);
+	str_len = strlen(str) + 1;
+	dup_str = malloc(sizeof(*str) * str_len);
+
+	if (dup_str == NULL)
+		return (NULL);
+
 	while (counter < str_len)
 	{
 		dup_str[counter] = *str++;
