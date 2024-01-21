@@ -26,6 +26,10 @@ char *str_concat(char *s1, char *s2)
 	concatinator = malloc(sizeof(*concatinator) * len);
 	counter = 0;
 
+	if (concatinator == NULL)
+	{
+		return (NULL);
+	}
 	while (*s1 || *s2)
 	{
 		if (*s1)
