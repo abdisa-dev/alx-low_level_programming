@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * create_array - creates array of char and init with a char
  * @size: size if memory to be allocated
@@ -12,13 +12,11 @@ char *create_array(unsigned int size, char c)
 	char *a;
 	unsigned int counter;
 
+	a = malloc(size * sizeof(c));
 
-	if (size <= 0)
+	if (size <= 0 || a == NULL)
 		return (NULL);
 
-	a = malloc(size * sizeof(*a));
-	if (a == NULL)
-		return (NULL);
 	while (size > counter)
 	{
 		a[counter] = c;
