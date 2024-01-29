@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * string_nconcat - concat string n length times
  * @s1: first string
@@ -11,7 +11,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	unsigned int i, len;
+	unsigned int i, j;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -19,21 +19,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	str = malloc(sizeof(char) * (strlen(s1) + 1));
+	str = malloc(sizeof(char) * (strlen(s1) + strlen(s2)));
+
 	if (str == NULL)
 		return (NULL);
 
-	len = 0;
-
 	for (i = 0; s1[i]; i++)
 	{
-		str[len++] = s1[i];
+		str[i] = s1[i];
 	}
-	for (i = 0; i < n && s2[i]; i++)
+	for (j = 0; j < n && s2[j]; j++)
 	{
-		str[len++] = s2[i];
+	printf("i - %d j - %d\n", i , j);
+		str[i + j] = s2[j];
 	}
-
-	str[len] = '\0';
+	str[(j + i) + 1] = '\0';
 	return (str);
 }
