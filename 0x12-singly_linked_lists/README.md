@@ -1,1 +1,1 @@
-ALX singly_linked_lists proj
+ALX Singly linked list proj
